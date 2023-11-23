@@ -1,0 +1,298 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link href="{% static 'assets/css/chat_prep.css' %}" rel="stylesheet">
+<style>
+    #custom-hover-section a.hover-link {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease-in-out;
+    }
+
+    #custom-hover-section:hover a.hover-link {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .fade-in-box {
+        opacity: 0; /* Start with the element invisible */
+        animation: fadeIn 2s ease-in-out forwards; /* Animation: name, duration, easing, fill-mode */
+    }
+
+    .typing-effect {
+        border-right: 2px solid; /* Simulates the cursor */
+        white-space: nowrap; /* Keeps the text in a single line */
+        overflow: hidden; /* Hides the text outside the box */
+        width: 0; /* Start with no text shown */
+        animation: typing 5s steps(30, end) forwards, blinkCursor 0.75s step-end infinite;
+        padding-top: 12px; 
+    }
+
+    .outerbrim {
+        padding: 12px;
+        background-color: white;
+        border-radius: 50px;
+
+    }
+    #search_input {
+        border-radius: 50px;
+    }
+</style>
+<br>
+<!-- ======= Hero Section ======= -->
+<main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about container">
+        <h1 id="typing-effect" style="text-align: center; font-family: 'Cookie', cursive; font-size: 89px;"></h1>
+        <form class="d-flex fade-in-box">
+            <div class="outerbrim form-control d-flex">
+                <input id="search_input" class="form-control me-1" type="search" placeholder="Can you provide me with a step-by-step guide on how to cook delicious eggs?" aria-label="Search">
+                <button style="border-radius: 20px;" class="btn btn-outline-success" type="submit">
+                    <i class="bi bi-send"></i>
+                </button>
+            </div>
+            
+          </form>
+        <br>
+        <div class="card fade-in-box">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <b>chat history</b>
+                    </div>
+                    <div class="col">
+                        <div style="float: right;">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                    </div>
+                </div>
+               <hr>
+                <div class="overflow-auto" style="height: 14rem;">
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                    <div class="d-flex" id="custom-hover-section">
+                        <i class="bi bi-chat-left me-2"></i>
+                        <a href="">
+                            <p>this is a test</p>
+                        </a>
+                    
+                        <a href="#" class="me-4 hover-link">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="#" class="hover-link">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <br>
+        <div class="autoplay fade-in-box">
+            <!-- Your slides here -->
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div style="text-align: center;" class="card-body">
+                        <img style="width: 100px; height: auto; border-radius: 50%; display: block; margin: auto;" src="{% static 'assets/img/chefs/chefs-3.jpg' %}" alt="">
+                        <p>this is a test 1</p>
+                        <a href="" class="btn btn-outline-info">chat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script>
+    $(document).ready(function(){
+        $('.autoplay').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 0, // Set to 0 for continuous scrolling
+            speed: 5000, // Adjust for the speed of scrolling
+            cssEase: 'linear',
+            arrows: false,
+            infinite: true,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            dots: false
+        });
+    });
+
+  document.addEventListener('DOMContentLoaded', function(){
+      var typed = new Typed('#typing-effect', {
+          strings: ["What would you like to make?"],
+          typeSpeed: 40,
+          backSpeed: 50,
+          loop: false
+      });
+  });
+
+    
+</script>
+
+{% endblock %}

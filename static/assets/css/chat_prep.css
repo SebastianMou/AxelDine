@@ -1,0 +1,13 @@
+ #main {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     /* Vertical centering */
+     align-items: center;
+     /* Horizontal centering */
+     /* min-height: 100vh; */
+ }
+
+ .about {
+     width: 55%;
+ }
